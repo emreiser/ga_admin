@@ -1,6 +1,7 @@
 
 require_relative 'school'
 
+# for testing
 require 'pry'
 
 
@@ -27,7 +28,7 @@ end
 
 def assign_seats
   my_class = students
-  binding.pry
+  # binding.pry
 
   reply = prompt_user 'Are you the seat picker for this week?'
   if reply.downcase.index('y') != nil
