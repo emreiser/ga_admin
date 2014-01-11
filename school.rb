@@ -8,7 +8,7 @@ module School
 
     def initialize(students)
       @students = students
-      @seats = %w{Table1 Table2 Table3 Table4 Table5 Table6 Table7 Table8}
+      @seats = %w(Table1 Table2 Table3 Table4 Table5 Table6 Table7 Table8)
       @assigned_seats = {}
     end
 

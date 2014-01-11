@@ -1,9 +1,11 @@
+
 require_relative 'school'
 
+require 'pry'
 
 
 def students
-  students = %w{Jordan Hongyu Yiyang Becky Emilie Laure Mike Praggya Janice Karen Libby Matt Prescott Jack Anna}
+  students = %w(Jordan Hongyu Yiyang Becky Emilie Laure Mike Praggya Janice Karen Libby Matt Prescott Jack Anna)
   my_class = School::Wdi.new(students)
 end
 
@@ -25,9 +27,14 @@ end
 
 def assign_seats
   my_class = students
+  binding.pry
+
   reply = prompt_user 'Are you the seat picker for this week?'
   if reply.downcase.index('y') != nil
     my_class.assign_seats
+  else
+    puts 'Well then you should mind your own business!'
+    exit
   end
 end
 
